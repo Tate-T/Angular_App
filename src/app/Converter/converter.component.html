@@ -8,7 +8,7 @@
     <app-formsale></app-formsale>
 </div> -->
 
-<form onSubmit={onSubmit}>
+<form onSubmit={{onSubmit}}>
     <div class="currency">
         <div class="inputStyles">
             <div class="currencyBuyText">
@@ -20,9 +20,8 @@
                 </select>
             </div>
             <h2>Enter the amount:</h2>
-            <!-- <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={currencySum}
-                onChange={handleInputChange} /> -->
-            <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value="" />
+            <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={{currencySum}}
+                onChange={{handleInputChange}} />
             <button class="currencyBtn" type="submit">
                 Count
             </button>
@@ -37,12 +36,12 @@
         </div>
         <p class="currencyResult">
             Amount in UAH:
-            <span class="currencyResultSum"> {{currencyResultSum}} &#8372;</span>
+            <span class="currencyResultSum"> {{currencyResult}} &#8372;</span>
         </p>
     </div>
 </form>
 
-<form onSubmit={onSubmit}>
+<form onSubmit={{onSubmit}}>
     <div class="currency">
         <div class="inputStyles">
             <div class="currencyBuyText">
@@ -54,9 +53,8 @@
                 </select>
             </div>
             <h2>Enter the amount:</h2>
-            <!-- <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={currencySum}
-                onChange={handleInputChange} /> -->
-            <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value="" />
+            <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={{currencySum}}
+                onChange={{handleInputChange}} />
             <button class="currencyBtn" type="submit">
                 Count
             </button>
