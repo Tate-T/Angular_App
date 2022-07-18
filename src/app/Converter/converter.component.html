@@ -8,7 +8,7 @@
     <app-formsale></app-formsale>
 </div> -->
 
-<form onSubmit={{onSubmit}}>
+<form>
     <div class="currency">
         <div class="inputStyles">
             <div class="currencyBuyText">
@@ -22,17 +22,9 @@
             <h2>Enter the amount:</h2>
             <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={{currencySum}}
                 onChange={{handleInputChange}} />
-            <button class="currencyBtn" type="submit">
+            <button class="currencyBtn" type="submit" (click)="getAmountSale()">
                 Count
             </button>
-            <!-- <select name="currency_1" class="inputFirst">
-                <option value="1">UAH</option>
-                <option value="2">USD</option>
-                <option value="3">EUR</option>
-            </select>  -->
-            <!-- <input type="text" name="currency" list="currency" autoComplete="off" />
-            <datalist id="currency">currency</datalist>
-            <select type="text"></select>  -->
         </div>
         <p class="currencyResult">
             Amount in UAH:
@@ -41,7 +33,7 @@
     </div>
 </form>
 
-<form onSubmit={{onSubmit}}>
+<form>
     <div class="currency">
         <div class="inputStyles">
             <div class="currencyBuyText">
@@ -54,8 +46,8 @@
             </div>
             <h2>Enter the amount:</h2>
             <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={{currencySum}}
-                onChange={{handleInputChange}} />
-            <button class="currencyBtn" type="submit">
+                (click)="handleInputChange()" />
+            <button class="currencyBtn" type="submit" (click)="getAmountBuy()">
                 Count
             </button>
         </div>
