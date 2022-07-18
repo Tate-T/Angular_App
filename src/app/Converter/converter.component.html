@@ -7,3 +7,68 @@
     <app-formbuy></app-formbuy>
     <app-formsale></app-formsale>
 </div> -->
+
+<!-- <form onSubmit={onSubmit}> -->
+<div class="currency">
+    <div class="inputStyles">
+        <div class="currencyBuyText">
+            <h2>Select type of currency for BUY:</h2>
+            <!-- <select class="inputCurrency" ref={selectValue}> -->
+            <select class="inputCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        <h2>Enter the amount:</h2>
+        <!-- <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={currencySum}
+                onChange={handleInputChange} /> -->
+        <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value="" />
+        <button class="currencyBtn" type="submit">
+            Count
+        </button>
+        <!-- <select name="currency_1" class="inputFirst">
+                <option value="1">UAH</option>
+                <option value="2">USD</option>
+                <option value="3">EUR</option>
+            </select>  -->
+        <!-- <input type="text" name="currency" list="currency" autoComplete="off" />
+            <datalist id="currency">currency</datalist>
+            <select type="text"></select>  -->
+    </div>
+    <p class="currencyResult">
+        Amount in UAH:
+        <span class="currencyResultSum">
+            <!-- {currencyResult.toFixed(2)} &#8372; -->
+        </span>
+    </p>
+</div>
+<!-- </form> -->
+
+<!-- <form onSubmit={onSubmit}> -->
+<div class="currency">
+    <div class="inputStyles">
+        <div class="currencyBuyText">
+            <h2>Select type of currency for SALE:</h2>
+            <!-- <select class="inputCurrency" ref={selectValue}> -->
+            <select class="inputCurrency">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        <h2>Enter the amount:</h2>
+        <!-- <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={currencySum}
+                onChange={handleInputChange} /> -->
+        <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value="" />
+        <button class="currencyBtn" type="submit">
+            Count
+        </button>
+    </div>
+    <p class="currencyResult">
+        Amount in
+        <!-- {currencyType}: -->
+        <span class="currencyResultSum">
+            <!-- {currencyResult.toFixed(2)} {currencyType} -->
+        </span>
+    </p>
+</div>
+<!-- </form> -->
