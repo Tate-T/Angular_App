@@ -19,8 +19,21 @@ export class ConverterComponent {
     currencyType: string = 'USD';
     currencyResult?:number = 0;
     currencySum?: string = '';
+    response: any = {
+        ccy: "",
+        base_ccy: "",
+        buy: "",
+        sale: ""
+      };
 
-    rates: any = this.http.get('*.json');
+    rates: any = this.http.get('*.json').subscribe((rates: any) => {
+        return this.response = {
+            ccy: rates.rate.ccy,
+            base_ccy: rates.rate.base_ccy,
+            buy: rates.rate.find((item: any) => item.buy  === 'USD' || 'EUR'),
+            sale: rates.rate.find((item: any) => item.sale === 'USD' || 'EUR'),
+        }
+      });
 
     // ngOnInit() {
     //     getCurrencyRateApi().then(response => {
