@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ConverterComponent } from './converter.component'; 
 import { FormBuyComponent } from './FormBuy/formbuy.component'; 
 import { FormSaleComponent } from './FormSale/formsale.component'; 
+import { HttpClientModule } from '@angular/common/http';
 // import {ConverterRoutingModule} ?
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FormSaleComponent } from './FormSale/formsale.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     // ConverterRoutingModule
   ],
   providers: [],
