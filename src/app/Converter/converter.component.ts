@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core"; 
+import { HttpClient } from '@angular/common/http';
 
 // import rates from "../../data/data.json";
 
@@ -12,12 +13,14 @@ import { Component, OnInit } from "@angular/core";
 
 
 export class ConverterComponent {
-   
+
+    constructor(private http: HttpClient) { }
+
     currencyType: string = 'USD';
     currencyResult?:number = 0;
     currencySum?: string = '';
 
-    rates: any = this.http.get('../../data/data.json');
+    rates: any = this.http.get('*.json');
 
     // ngOnInit() {
     //     getCurrencyRateApi().then(response => {
@@ -29,7 +32,7 @@ export class ConverterComponent {
         this.currencySum = value;
       };
     
-      getAmountBuy (currencySum: any) {
+      getAmountBuy (currencySum: any, rates: any) {
         switch (currencySum) {
           case 'USD':
             this.currencyResult = rates[0].sale * +currencySum;
@@ -42,7 +45,7 @@ export class ConverterComponent {
         }
       };
 
-      getAmountSale (currencySum: any) {
+      getAmountSale (currencySum: any, rates: any) {
         switch (currencySum) {
           case 'USD':
             this.currencyResult = +currencySum / rates[0].sale;
