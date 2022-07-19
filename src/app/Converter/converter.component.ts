@@ -1,4 +1,6 @@
-import { Component } from "@angular/core"; 
+import { Component, OnInit } from "@angular/core"; 
+
+import rates from "../../data/data.json";
 
 @Component({
     selector: 'app-converter',
@@ -12,6 +14,11 @@ export class ConverterComponent {
     currencyType: string = 'USD';
     currencyResult?:number = 0;
     currencySum?: string = '';
+
+    // ngOnInit() {
+    //     getCurrencyRateApi().then(response => {
+    //         setRates(response.rates)
+    // }
 
      handleInputChange (event: any) {
         const { value } = event.currentTarget.value;
