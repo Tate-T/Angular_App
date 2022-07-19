@@ -20,9 +20,12 @@
                 </select>
             </div>
             <h2>Enter the amount:</h2>
-            <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={{currencySum}}
-                onChange={{handleInputChange}} />
-            <button class="currencyBtn" type="submit" (click)="getAmountSale()">
+            <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" [value]="currencySum"
+                (input)="handleInputChange($event)" />
+            <!-- <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum"
+                [(ngModel)]="currencySum" (ngModelChange)="handleInputChange($event)" /> -->
+            <!-- <button class="currencyBtn" type="submit" (click)="getAmountSale()"> -->
+            <button class="currencyBtn" type="submit">
                 Count
             </button>
         </div>
@@ -45,9 +48,13 @@
                 </select>
             </div>
             <h2>Enter the amount:</h2>
-            <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" value={{currencySum}}
-                (click)="handleInputChange()" />
-            <button class="currencyBtn" type="submit" (click)="getAmountBuy()">
+            <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum" [value]="currencySum"
+                (input)="handleInputChange($event)" />
+
+            <!-- <input type="text" placeholder="enter a sum" class="inputCurrency" name="currencySum"
+                [(ngModel)]="currencySum" (ngModelChange)="handleInputChange($event)" /> -->
+            <!-- <button class="currencyBtn" type="submit" (click)="getAmountBuy()"> -->
+            <button class="currencyBtn" type="submit">
                 Count
             </button>
         </div>
