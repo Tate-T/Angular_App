@@ -18,33 +18,33 @@ export class ConverterComponent {
         this.currencySum = value;
       };
     
-    //   getAmountBuy () {
-    //     switch (selectValue.current.value) {
-    //       case 'USD':
-    //         this.currencyResult = rates[0].sale * this.currencySum;
-    //         break;
-    //       case 'EUR':
-    //         this. currencyResult = rates[1].sale * this.currencySum;
-    //         break;
-    //       default:
-    //         return;
-    //     }
-    //   };
+      getAmountBuy (currencySum: any) {
+        switch (currencySum) {
+          case 'USD':
+            this.currencyResult = rates[0].sale * +currencySum;
+            break;
+          case 'EUR':
+            this. currencyResult = rates[1].sale * +currencySum;
+            break;
+          default:
+            return;
+        }
+      };
 
-    //   getAmountSale () {
-    //     switch (selectValue.current.value) {
-    //       case 'USD':
-    //         currencyResult = currencySum / rates[0].sale;
-    //         currencyType = rates[0].ccy;
-    //         break;
-    //       case 'EUR':
-    //         currencyResult = currencySum / rates[1].sale;
-    //         currencyType = rates[1].ccy;
-    //         break;
-    //       default:
-    //         return;
-    //     }
-    //   };
+      getAmountSale (currencySum: any) {
+        switch (currencySum) {
+          case 'USD':
+            this.currencyResult = +currencySum / rates[0].sale;
+            this.currencyType = rates[0].ccy;
+            break;
+          case 'EUR':
+            this.currencyResult = +currencySum / rates[1].sale;
+            this.currencyType = rates[1].ccy;
+            break;
+          default:
+            return;
+        }
+      };
     
     //   onSubmit (e: any) {
     //     e.preventDefault();
