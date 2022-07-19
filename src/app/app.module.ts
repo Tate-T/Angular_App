@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {}
 // import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,4 +21,5 @@ import { ConverterComponent } from './Converter/converter.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
