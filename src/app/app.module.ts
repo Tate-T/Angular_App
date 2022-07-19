@@ -11,12 +11,12 @@ import { ConverterComponent } from './Converter/converter.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    ConverterComponent,
-    // FormsModule
+    ConverterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
